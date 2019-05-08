@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Ynab do
+describe YNAB do
   # TODO: Write tests
 
   it "works" do
