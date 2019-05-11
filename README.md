@@ -34,4 +34,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-github-user](https://github.com/your-github-user) your-name-here - creator, maintainer
+- [@jaredsmithse](https://github.com/jaredsmithse) Jared Smith - creator, maintainer
