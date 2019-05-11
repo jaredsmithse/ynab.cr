@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jaredsmithse/ynab.svg?branch=master)](https://travis-ci.org/jaredsmithse/ynab)
+
 # ynab
 
 TODO: Write a description here
