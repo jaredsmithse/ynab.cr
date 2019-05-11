@@ -13,6 +13,15 @@ module YNAB
 
         YNAB::API::AccountsWrapper.from_json(response.body, "data").accounts
       end
+
+      def get(account_id)
+        response = HTTP::Client.get(
+          "#{@base_url}/#{account_id}",
+          headers: HTTP::Headers{"Authorization" => "Bearer #{@client.access_token}"}
+        )
+
+        YNAB::API::AccountWrapper.from_json(response.body, "data").account
+      end
     end
   end
 end

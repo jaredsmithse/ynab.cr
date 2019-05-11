@@ -7,6 +7,7 @@ require "./ynab/constants"
 require "./ynab/api/budgets"
 require "./ynab/api/accounts"
 require "./ynab/api/wrappers/accounts_wrapper"
+require "./ynab/api/wrappers/account_wrapper"
 require "./ynab/api/wrappers/budget_summary_wrapper"
 require "./ynab/api/wrappers/budget_settings_wrapper"
 
