@@ -2,7 +2,10 @@
 
 # ynab
 
-TODO: Write a description here
+This is an API client for YNAB. It is still in development and there is a lot to do!
+
+## TODO
+
 
 ## Installation
 
@@ -24,7 +27,7 @@ TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
+For development, you will need a personal access token from YNAB. You can find instructions on how to get one for your account [here](https://api.youneedabudget.com).
 
 ## Contributing
 
