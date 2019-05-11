@@ -5,6 +5,10 @@ module YNAB
         @base_url = "#{YNAB::Constants::BASE_URL}/budgets"
       end
 
+      def accounts(budget_id)
+        YNAB::API::Accounts.new(@client, budget_id)
+      end
+
       def all
         response = HTTP::Client.get(
           @base_url,
