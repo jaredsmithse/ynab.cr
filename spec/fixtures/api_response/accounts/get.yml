@@ -1,0 +1,16 @@
+budget_id: budget-id
+account_id: account-id
+endpoint: https://api.youneedabudget.com/v1//budgets/budget-id/accounts/account-id
+response:
+  data:
+    account:
+      id: account-id
+      name: Chase Checking
+      type: checking
+      on_budget: true
+      closed: false
+      balance: 100
+      cleared_balance: 80
+      uncleared_balance: 20
+      transfer_payee_id: transfer-payee-id
+      deleted: false
