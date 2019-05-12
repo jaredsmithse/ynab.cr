@@ -14,7 +14,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   ynab:
-    github: your-github-user/ynab
+    github: jaredsmithse/ynab
 ```
 
 ## Usage
