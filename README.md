@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/jaredsmithse/ynab.svg?branch=master)](https://travis-ci.org/jaredsmithse/ynab)
-
 # ynab
+[![Build Status](https://travis-ci.org/jaredsmithse/ynab.svg?branch=master)](https://travis-ci.org/jaredsmithse/ynab)
+[![GitHub license](https://img.shields.io/github/license/c910335/mass-spec.svg)](https://github.com/c910335/mass-spec/blob/master/LICENSE)
 
 This is an API client for YNAB. It is still in development and there is a lot to do!
 
