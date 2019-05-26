@@ -11,4 +11,8 @@ class BudgetSummary
   property first_month : Time
   @[JSON::Field(converter: Time::Format.new("%F"))]
   property last_month : Time
+
+  def accounts
+    YNAB::API::Accounts.new(@id)
+  end
 end
