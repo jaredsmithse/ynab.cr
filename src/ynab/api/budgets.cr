@@ -1,19 +1,22 @@
 module YNAB
   module API
     class Budgets
-      def initialize(@client : YNAB::Client)
-        @base_url = "#{YNAB::Constants::BASE_URL}/budgets"
+      getter base_url : String
+      getter headers
+
+      def initialize
+        @base_url = "#{YNAB::Client.settings.base_url}/budgets"
+
+        access_token = YNAB::Client.settings.access_token
+        @headers = HTTP::Headers{"Authorization" => "Bearer #{access_token}"}
       end
 
       def accounts(budget_id)
-        YNAB::API::Accounts.new(@client, budget_id)
+        YNAB::API::Accounts.new(budget_id)
       end
 
       def all
-        response = HTTP::Client.get(
-          @base_url,
-          headers: HTTP::Headers{"Authorization" => "Bearer #{@client.access_token}"}
-        )
+        response = HTTP::Client.get(@base_url, headers: @headers)
 
         YNAB::API::BudgetSummaryWrapper.from_json(response.body, "data").budgets
       end
@@ -21,7 +24,7 @@ module YNAB
       def settings(budget_id)
         response = HTTP::Client.get(
           "#{@base_url}/#{budget_id}/settings",
-          headers: HTTP::Headers{"Authorization" => "Bearer #{@client.access_token}"}
+          headers: @headers
         )
 
         YNAB::API::BudgetSettingsWrapper.from_json(response.body, "data").settings

@@ -3,7 +3,6 @@ require "json"
 require "habitat"
 
 require "./ynab/client"
-require "./ynab/constants"
 
 require "./ynab/api/budgets"
 require "./ynab/api/accounts"

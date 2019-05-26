@@ -5,7 +5,7 @@ describe YNAB::API::Accounts do
   describe "#get" do
     it "parses the response and returns the right model" do
       fixture = YAML.parse(File.read("spec/fixtures/api_response/accounts/get.yml"))
-      client = YNAB::Client.new("api_key")
+      client = YNAB::Client
 
       WebMock.
         stub(:get, fixture["endpoint"].to_s).
