@@ -1,5 +1,6 @@
 require "http/client"
 require "json"
+require "habitat"
 
 require "./ynab/client"
 require "./ynab/constants"

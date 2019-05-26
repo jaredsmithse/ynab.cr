@@ -12,3 +12,5 @@ development_dependencies:
   webmock:
     github: manastech/webmock.cr
     branch: master
+  habitat:
+    github: luckyframework/habitat
