@@ -4,7 +4,7 @@ module YNAB
       getter base_url : String
       getter headers
 
-      def initialize(@budget_id : String)
+      def initialize(@budget_id : UUID)
         @base_url = "#{YNAB::Client.settings.base_url}/budgets/#{@budget_id}/accounts"
 
         access_token = YNAB::Client.settings.access_token

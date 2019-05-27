@@ -1,10 +1,10 @@
-budget_id: budget-id
-account_id: account-id
-endpoint: https://api.youneedabudget.com/v1//budgets/budget-id/accounts/account-id
+budget_id: cbe99200-0d5b-49f9-882f-1ba31acb72e5
+account_id: 7a1c4bcf-e49e-4f00-85cf-111a9b7f5b17
+endpoint: https://api.youneedabudget.com/v1//budgets/cbe99200-0d5b-49f9-882f-1ba31acb72e5/accounts/7a1c4bcf-e49e-4f00-85cf-111a9b7f5b17
 response:
   data:
     account:
-      id: account-id
+      id: 7a1c4bcf-e49e-4f00-85cf-111a9b7f5b17
       name: Chase Checking
       type: checking
       on_budget: true
@@ -12,5 +12,5 @@ response:
       balance: 100
       cleared_balance: 80
       uncleared_balance: 20
-      transfer_payee_id: transfer-payee-id
+      transfer_payee_id: d1664f90-8cda-436d-9bff-2f69948a3431
       deleted: false

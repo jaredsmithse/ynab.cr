@@ -1,5 +1,7 @@
 require "http/client"
 require "json"
+require "uuid/json"
+require "uuid"
 require "habitat"
 
 require "./ynab/client"

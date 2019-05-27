@@ -1,7 +1,7 @@
 class BudgetSummary
   include JSON::Serializable
 
-  property id : String
+  property id : UUID
   property name : String
   property last_modified_on : Time
   property date_format : DateFormat

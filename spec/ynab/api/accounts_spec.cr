@@ -5,15 +5,15 @@ describe YNAB::API::Accounts do
   describe "#get" do
     it "parses the response and returns the right model" do
       fixture = YAML.parse(File.read("spec/fixtures/api_response/accounts/get.yml"))
-      client = YNAB::Client
+      budget_id = UUID.new(fixture["budget_id"].to_s)
 
       WebMock.
         stub(:get, fixture["endpoint"].to_s).
         to_return(body: fixture["response"].to_json)
 
-      client.
+      YNAB::Client.
         budgets.
-        accounts(fixture["budget_id"].to_s).
+        accounts(budget_id).
         get(fixture["account_id"].to_s).
         class.
         should eq Account
