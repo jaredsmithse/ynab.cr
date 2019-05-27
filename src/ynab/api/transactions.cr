@@ -1,18 +1,14 @@
 module YNAB
   module API
     class Transactions
-      getter base_url : String
-      getter headers
+      delegate :host, :headers, to: YNAB::Client
 
-      def initialize(@budget_id : UUID)
-        @base_url = "#{YNAB::Client.settings.base_url}/budgets/#{@budget_id}/transactions"
-
-        access_token = YNAB::Client.settings.access_token
-        @headers = HTTP::Headers{"Authorization" => "Bearer #{access_token}"}
+      def initialize(budget_id)
+        @base_url = "#{host}/budgets/#{budget_id}/transactions"
       end
 
       def all
-        response = HTTP::Client.get(@base_url, headers: @headers)
+        response = HTTP::Client.get(@base_url, headers: headers)
 
         YNAB::API::TransactionsWrapper.from_json(response.body, "data").transactions
       end

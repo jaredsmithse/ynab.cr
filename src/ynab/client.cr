@@ -5,6 +5,14 @@ module YNAB
       setting base_url : String
     end
 
+    def self.headers
+      @@headers ||= HTTP::Headers{"Authorization" => "Bearer #{settings.access_token}"}
+    end
+
+    def self.host
+      settings.base_url
+    end
+
     def self.budgets
       YNAB::API::Budgets.new
     end
