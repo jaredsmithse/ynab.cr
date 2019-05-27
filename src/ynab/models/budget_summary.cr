@@ -15,4 +15,8 @@ class BudgetSummary
   def accounts
     YNAB::API::Accounts.new(@id)
   end
+
+  def transactions
+    YNAB::API::Transactions.new(@id)
+  end
 end
