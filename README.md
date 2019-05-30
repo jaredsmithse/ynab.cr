@@ -5,7 +5,14 @@
 This is an API client for YNAB. It is still in development and there is a lot to do!
 
 ## TODO
-
+- [ ] OAuth
+- [ ] Errors
+- [ ] Delta Requests
+- [ ] Caching
+- [ ] Docs for Usage
+- [ ] Query Options
+- [ ] API Status Check
+- [ ] All Endpoints
 
 ## Installation
 
