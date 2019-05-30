@@ -16,5 +16,9 @@ module YNAB
     def self.budgets
       YNAB::API::Budgets.new
     end
+
+    def self.user
+      YNAB::UserApi.new
+    end
   end
 end
