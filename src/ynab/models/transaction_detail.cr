@@ -1,21 +1,6 @@
 class TransactionDetail
   include JSON::Serializable
 
-  enum ClearedStatus
-    Cleared
-    Uncleared
-    Reconciled
-  end
-
-  enum FlagColor
-    Red
-    Orange
-    Yellow
-    Green
-    Blue
-    Purple
-  end
-
   property id : UUID
 
   @[JSON::Field(converter: Time::Format.new("%F"))]

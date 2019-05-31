@@ -1,20 +1,6 @@
 class Account
   include JSON::Serializable
 
-  enum AccountType
-    Checking
-    Savings
-    Cash
-    CreditCard
-    LineOfCredit
-    OtherAsset
-    OtherLiability
-    PayPal
-    MerchantAccount
-    InvestmentAccount
-    Mortgage
-  end
-
   property id : UUID
   property name : String
   property type : AccountType
