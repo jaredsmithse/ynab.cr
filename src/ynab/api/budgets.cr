@@ -17,6 +17,12 @@ module YNAB
         YNAB::API::BudgetSummaryWrapper.from_json(response.body, "data").budgets
       end
 
+      def get(budget_id)
+        response = HTTP::Client.get("#{@base_url}/#{budget_id}", headers: headers)
+
+        YNAB::API::BudgetDetailWrapper.from_json(response.body, "data").budget
+      end
+
       def settings(budget_id)
         response = HTTP::Client.get("#{@base_url}/#{budget_id}/settings", headers: headers)
 
