@@ -7,12 +7,12 @@ class TransactionDetail
   property date : Time
 
   property amount : Int64
-  property memo :	String?
-  property cleared :	ClearedStatus
-  property approved :	Bool
-  property flag_color :	FlagColor?
-  property account_id :	UUID
-  property payee_id :	UUID?
+  property memo : String?
+  property cleared : ClearedStatus
+  property approved : Bool
+  property flag_color : FlagColor?
+  property account_id : UUID
+  property payee_id : UUID?
   property category_id : UUID?
   property transfer_account_id : UUID?
   property transfer_transaction_id : UUID?

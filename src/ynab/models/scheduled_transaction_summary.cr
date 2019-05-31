@@ -11,10 +11,10 @@ class ScheduledTransactionSummary
 
   property cleared : Frequency
   property amount : Int64
-  property memo :	String?
-  property flag_color :	FlagColor?
-  property account_id :	UUID
-  property payee_id :	UUID?
+  property memo : String?
+  property flag_color : FlagColor?
+  property account_id : UUID
+  property payee_id : UUID?
   property category_id : UUID?
   property transfer_account_id : UUID?
   property deleted : Bool
