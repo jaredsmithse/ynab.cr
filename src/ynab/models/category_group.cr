@@ -4,5 +4,5 @@ class CategoryGroup
   property id : UUID
   property name : String
   property hidden : Bool
-  property deleted : Int32
+  property deleted : Bool
 end
