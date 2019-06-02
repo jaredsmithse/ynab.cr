@@ -18,6 +18,10 @@ This is an API client for YNAB. It is still in development and there is a lot to
 - [ ] Query Options
 - [ ] API Status Check
 - [ ] All Endpoints
+  - [ ] GET
+  - [ ] POST
+  - [ ] PUT
+  - [ ] DELETE
 
 ## Installation
 
