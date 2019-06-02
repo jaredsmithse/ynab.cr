@@ -5,24 +5,6 @@
 
 This is an API client for YNAB. It is still in development and there is a lot to do!
 
-## TODO
-- [ ] OAuth
-- [ ] Errors
-- [ ] Delta Requests
-- [ ] Caching
-- [ ] Docs
-  - [ ] For Usage in README
-  - [ ] For each attribute (comments)
-  - [ ] For each class
-  - [ ] Hosted
-- [ ] Query Options
-- [ ] API Status Check
-- [ ] All Endpoints
-  - [ ] GET
-  - [ ] POST
-  - [ ] PUT
-  - [ ] DELETE
-
 ## Installation
 
 Add this to your application's `shard.yml`:
