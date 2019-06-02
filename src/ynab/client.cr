@@ -21,6 +21,10 @@ module YNAB
       YNAB::API::Budgets.new
     end
 
+    def self.categories(budget_id)
+      YNAB::API::Categories.new(budget_id)
+    end
+
     def self.payees(budget_id)
       YNAB::API::Payees.new(budget_id)
     end

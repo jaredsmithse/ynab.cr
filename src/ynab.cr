@@ -8,6 +8,7 @@ require "./ynab/client"
 
 require "./ynab/api/accounts"
 require "./ynab/api/budgets"
+require "./ynab/api/categories"
 require "./ynab/api/payees"
 require "./ynab/api/transactions"
 require "./ynab/api/user_api"
