@@ -13,8 +13,20 @@ module YNAB
       settings.base_url
     end
 
+    def self.accounts(budget_id)
+      YNAB::API::Accounts.new(budget_id)
+    end
+
     def self.budgets
       YNAB::API::Budgets.new
+    end
+
+    def self.payees(budget_id)
+      YNAB::API::Payees.new(budget_id)
+    end
+
+    def self.transactions(budget_id)
+      YNAB::API::Transactions.new(budget_id)
     end
 
     def self.user

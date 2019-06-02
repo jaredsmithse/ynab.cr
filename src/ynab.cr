@@ -6,8 +6,9 @@ require "habitat"
 
 require "./ynab/client"
 
-require "./ynab/api/budgets"
 require "./ynab/api/accounts"
+require "./ynab/api/budgets"
+require "./ynab/api/payees"
 require "./ynab/api/transactions"
 require "./ynab/api/user_api"
 
@@ -20,6 +21,8 @@ require "./ynab/api/wrappers/category_groups_wrapper"
 require "./ynab/api/wrappers/category_wrapper"
 require "./ynab/api/wrappers/month_detail_wrapper"
 require "./ynab/api/wrappers/month_summaries_wrapper"
+require "./ynab/api/wrappers/payee_wrapper"
+require "./ynab/api/wrappers/payees_wrapper"
 require "./ynab/api/wrappers/transactions_wrapper"
 require "./ynab/api/wrappers/user_wrapper"
 

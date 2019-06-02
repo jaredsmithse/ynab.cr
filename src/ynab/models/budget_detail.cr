@@ -23,6 +23,14 @@ class BudgetDetail
   property scheduled_transactions : Array(ScheduledTransactionSummary)
   property scheduled_subtransactions : Array(ScheduledSubTransaction)
 
+  def accounts
+    YNAB::API::Accounts.new(@id)
+  end
+
+  def payees
+    YNAB::API::Payees.new(@id)
+  end
+
   def transactions
     YNAB::API::Transactions.new(@id)
   end
