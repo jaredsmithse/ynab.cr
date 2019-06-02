@@ -25,6 +25,10 @@ module YNAB
       YNAB::API::Categories.new(budget_id)
     end
 
+    def self.payee_locations(budget_id)
+      YNAB::API::PayeeLocations.new(budget_id)
+    end
+
     def self.payees(budget_id)
       YNAB::API::Payees.new(budget_id)
     end

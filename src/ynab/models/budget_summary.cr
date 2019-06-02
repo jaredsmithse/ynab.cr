@@ -24,6 +24,10 @@ class BudgetSummary
     YNAB::API::Payees.new(@id)
   end
 
+  def payee_locations
+    YNAB::API::PayeeLocations.new(@id)
+  end
+
   def transactions
     YNAB::API::Transactions.new(@id)
   end
