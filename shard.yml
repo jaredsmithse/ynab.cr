@@ -2,9 +2,9 @@ name: ynab
 version: 0.1.0
 
 authors:
-  - your-name-here <your-email-here>
+  - Jared Smith <shards@jaredsmith.se>
 
-crystal: 0.26.0
+crystal: 0.29.0
 
 license: MIT
 
