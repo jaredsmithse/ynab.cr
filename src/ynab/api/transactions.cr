@@ -7,7 +7,7 @@ module YNAB
         @base_url = "#{host}/budgets/#{budget_id}/transactions"
       end
 
-      def all
+      def get_all
         response = HTTP::Client.get(@base_url, headers: headers)
 
         YNAB::API::TransactionsWrapper.from_json(response.body, "data").transactions

@@ -11,7 +11,7 @@ module YNAB
         YNAB::API::Accounts.new(budget_id)
       end
 
-      def all
+      def get_all
         response = HTTP::Client.get(@base_url, headers: headers)
 
         YNAB::API::BudgetSummaryWrapper.from_json(response.body, "data").budgets

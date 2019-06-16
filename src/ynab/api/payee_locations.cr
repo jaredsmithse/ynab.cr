@@ -7,7 +7,7 @@ module YNAB
         @base_url = "#{host}/budgets/#{budget_id}/payee_locations"
       end
 
-      def all
+      def get_all
         response = HTTP::Client.get(@base_url, headers: headers)
 
         YNAB::API::PayeeLocationsWrapper.from_json(response.body, "data").payee_locations

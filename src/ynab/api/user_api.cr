@@ -6,7 +6,7 @@ module YNAB
       @base_url = "#{host}/user"
     end
 
-    def fetch
+    def get_all
       response = HTTP::Client.get(@base_url, headers: headers)
 
       YNAB::API::UserWrapper.from_json(response.body, "data").user

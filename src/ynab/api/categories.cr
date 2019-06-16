@@ -7,7 +7,7 @@ module YNAB
         @base_url = "#{host}/budgets/#{budget_id}/categories"
       end
 
-      def all
+      def get_all
         response = HTTP::Client.get(@base_url, headers: headers)
 
         YNAB::API::CategoryGroupsWrapper.from_json(response.body, "data").category_groups
