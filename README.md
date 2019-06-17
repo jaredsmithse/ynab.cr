@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/c910335/mass-spec.svg)](https://github.com/c910335/mass-spec/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/jaredsmithse/ynab.svg)](https://github.com/jaredsmithse/ynab/releases)
 
-This is an API client for YNAB. It is still in development and there is a lot to do!
+This is an API client for YNAB. It has most of the basic operations for fetching your data from YNAB. See the issues for this project for missing functionality. The primary functionality that still needs implementation is Delta Requests.
 
 ## Installation
 
@@ -16,12 +16,46 @@ dependencies:
 ```
 
 ## Usage
+The YNAB API has two base objects, `Budget` and `User`. `User` has no other nested resources, while every other resource is nested under `Budget`. If you have a `budget_id` you can initialize the resource you want directly. All available resources are in the `./src/api/` folder.
 
+### Examples
+#### Configuration
+Instructions for obtaining your own API token can be found on the YNAB website [here](https://api.youneedabudget.com).
 ```crystal
 require "ynab"
+
+YNAB::Client.configure do |settings|
+  settings.access_token = ynab_api_token
+  settings.base_url = "https://api.youneedabudget.com/v1/"
+end
+client = YNAB::Client
 ```
 
-TODO: Write usage instructions here
+#### Getting All Budgets For An Account
+```crystal
+client = YNAB::Client
+budgets = client.budgets.get_all.each do |budget|
+  puts budget.name
+end
+```
+
+#### Working With Resources For A Budget
+```crystal
+client = YNAB::Client
+# Get a list of accounts with a pre-fetched budget_id
+budgets = client.budgets.get_all
+
+# you can alternatively do budgets.first.accounts.get_all
+accounts = client.accounts(budgets.first.id).get_all
+accounts.each { |account| "#{account.name}: $#{account.balance / 100}" }
+
+# Find how many times you use Lyft every month
+transactions = budgets.first.transactions.get_all
+transactions.
+  select { |txn| txn.payee_name == "Lyft" }.
+  group_by { |txn| "#{txn.date.year}-#{txn.date.month}" }.
+  transform_values(&.size)
+```
 
 ## Development
 
