@@ -1,5 +1,6 @@
-name: ynab
+name: ynab.cr
 version: 0.1.0
+description: A library to interact with your YNAB data
 
 authors:
   - Jared Smith <shards@jaredsmith.se>
