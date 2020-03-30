@@ -4,6 +4,8 @@ crystal:
   - latest
   - nightly
 
+cache: shards
+
 script:
   - crystal spec
   - crystal tool format --check
