@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="ynab.cr">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="ynab.cr">
+  <title>ClearedStatus - ynab.cr HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          ynab.cr
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="ynab.cr/Account" data-name="account">
+      <a href="Account.html">Account</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/AccountType" data-name="accounttype">
+      <a href="AccountType.html">AccountType</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/BudgetDetail" data-name="budgetdetail">
+      <a href="BudgetDetail.html">BudgetDetail</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/BudgetSettings" data-name="budgetsettings">
+      <a href="BudgetSettings.html">BudgetSettings</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/BudgetSummary" data-name="budgetsummary">
+      <a href="BudgetSummary.html">BudgetSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/Category" data-name="category">
+      <a href="Category.html">Category</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/CategoryGroup" data-name="categorygroup">
+      <a href="CategoryGroup.html">CategoryGroup</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/CategoryGroupWithCategories" data-name="categorygroupwithcategories">
+      <a href="CategoryGroupWithCategories.html">CategoryGroupWithCategories</a>
+      
+    </li>
+  
+  <li class=" current" data-id="ynab.cr/ClearedStatus" data-name="clearedstatus">
+      <a href="ClearedStatus.html">ClearedStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/CurrencyFormat" data-name="currencyformat">
+      <a href="CurrencyFormat.html">CurrencyFormat</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/DateFormat" data-name="dateformat">
+      <a href="DateFormat.html">DateFormat</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/FlagColor" data-name="flagcolor">
+      <a href="FlagColor.html">FlagColor</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/Frequency" data-name="frequency">
+      <a href="Frequency.html">Frequency</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/MonthDetail" data-name="monthdetail">
+      <a href="MonthDetail.html">MonthDetail</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/MonthSummary" data-name="monthsummary">
+      <a href="MonthSummary.html">MonthSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/Payee" data-name="payee">
+      <a href="Payee.html">Payee</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/PayeeLocation" data-name="payeelocation">
+      <a href="PayeeLocation.html">PayeeLocation</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/ScheduledSubTransaction" data-name="scheduledsubtransaction">
+      <a href="ScheduledSubTransaction.html">ScheduledSubTransaction</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/ScheduledTransactionSummary" data-name="scheduledtransactionsummary">
+      <a href="ScheduledTransactionSummary.html">ScheduledTransactionSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/SubTransaction" data-name="subtransaction">
+      <a href="SubTransaction.html">SubTransaction</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/TransactionDetail" data-name="transactiondetail">
+      <a href="TransactionDetail.html">TransactionDetail</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/TransactionSummary" data-name="transactionsummary">
+      <a href="TransactionSummary.html">TransactionSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/User" data-name="user">
+      <a href="User.html">User</a>
+      
+    </li>
+  
+  <li class="parent " data-id="ynab.cr/YNAB" data-name="ynab">
+      <a href="YNAB.html">YNAB</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="ynab.cr/YNAB/API" data-name="ynab::api">
+      <a href="YNAB/API.html">API</a>
+      
+        <ul>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/Accounts" data-name="ynab::api::accounts">
+      <a href="YNAB/API/Accounts.html">Accounts</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/AccountsWrapper" data-name="ynab::api::accountswrapper">
+      <a href="YNAB/API/AccountsWrapper.html">AccountsWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/AccountWrapper" data-name="ynab::api::accountwrapper">
+      <a href="YNAB/API/AccountWrapper.html">AccountWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/BudgetDetailWrapper" data-name="ynab::api::budgetdetailwrapper">
+      <a href="YNAB/API/BudgetDetailWrapper.html">BudgetDetailWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/Budgets" data-name="ynab::api::budgets">
+      <a href="YNAB/API/Budgets.html">Budgets</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/BudgetSettingsWrapper" data-name="ynab::api::budgetsettingswrapper">
+      <a href="YNAB/API/BudgetSettingsWrapper.html">BudgetSettingsWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/BudgetSummaryWrapper" data-name="ynab::api::budgetsummarywrapper">
+      <a href="YNAB/API/BudgetSummaryWrapper.html">BudgetSummaryWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/Categories" data-name="ynab::api::categories">
+      <a href="YNAB/API/Categories.html">Categories</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/CategoryGroupsWrapper" data-name="ynab::api::categorygroupswrapper">
+      <a href="YNAB/API/CategoryGroupsWrapper.html">CategoryGroupsWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/CategoryWrapper" data-name="ynab::api::categorywrapper">
+      <a href="YNAB/API/CategoryWrapper.html">CategoryWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/MonthDetailWrapper" data-name="ynab::api::monthdetailwrapper">
+      <a href="YNAB/API/MonthDetailWrapper.html">MonthDetailWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/MonthSummariesWrapper" data-name="ynab::api::monthsummarieswrapper">
+      <a href="YNAB/API/MonthSummariesWrapper.html">MonthSummariesWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/PayeeLocations" data-name="ynab::api::payeelocations">
+      <a href="YNAB/API/PayeeLocations.html">PayeeLocations</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/PayeeLocationsWrapper" data-name="ynab::api::payeelocationswrapper">
+      <a href="YNAB/API/PayeeLocationsWrapper.html">PayeeLocationsWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/PayeeLocationWrapper" data-name="ynab::api::payeelocationwrapper">
+      <a href="YNAB/API/PayeeLocationWrapper.html">PayeeLocationWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/Payees" data-name="ynab::api::payees">
+      <a href="YNAB/API/Payees.html">Payees</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/PayeesWrapper" data-name="ynab::api::payeeswrapper">
+      <a href="YNAB/API/PayeesWrapper.html">PayeesWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/PayeeWrapper" data-name="ynab::api::payeewrapper">
+      <a href="YNAB/API/PayeeWrapper.html">PayeeWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/Transactions" data-name="ynab::api::transactions">
+      <a href="YNAB/API/Transactions.html">Transactions</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/TransactionsWrapper" data-name="ynab::api::transactionswrapper">
+      <a href="YNAB/API/TransactionsWrapper.html">TransactionsWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/API/UserWrapper" data-name="ynab::api::userwrapper">
+      <a href="YNAB/API/UserWrapper.html">UserWrapper</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="ynab.cr/YNAB/Client" data-name="ynab::client">
+      <a href="YNAB/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" " data-id="ynab.cr/YNAB/Client/HabitatSettings" data-name="ynab::client::habitatsettings">
+      <a href="YNAB/Client/HabitatSettings.html">HabitatSettings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="ynab.cr/YNAB/UserApi" data-name="ynab::userapi">
+      <a href="YNAB/UserApi.html">UserApi</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> ClearedStatus
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jaredsmithse/ynab.cr/blob/154044af3ab317527919c98951ff4e641bc20201/src/ynab/enums/cleared_status.cr#L1" target="_blank">
+        ynab/enums/cleared_status.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Cleared">
+        <strong>Cleared</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Uncleared">
+        <strong>Uncleared</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Reconciled">
+        <strong>Reconciled</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cleared?-instance-method" class="signature"><strong>#cleared?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reconciled?-instance-method" class="signature"><strong>#reconciled?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uncleared?-instance-method" class="signature"><strong>#uncleared?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="cleared?-instance-method">
+      <div class="signature">
+        
+        def <strong>cleared?</strong>
+
+        <a class="method-permalink" href="#cleared?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jaredsmithse/ynab.cr/blob/154044af3ab317527919c98951ff4e641bc20201/src/ynab/enums/cleared_status.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reconciled?-instance-method">
+      <div class="signature">
+        
+        def <strong>reconciled?</strong>
+
+        <a class="method-permalink" href="#reconciled?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jaredsmithse/ynab.cr/blob/154044af3ab317527919c98951ff4e641bc20201/src/ynab/enums/cleared_status.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uncleared?-instance-method">
+      <div class="signature">
+        
+        def <strong>uncleared?</strong>
+
+        <a class="method-permalink" href="#uncleared?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jaredsmithse/ynab.cr/blob/154044af3ab317527919c98951ff4e641bc20201/src/ynab/enums/cleared_status.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
